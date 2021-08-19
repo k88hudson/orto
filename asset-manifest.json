@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/orto/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/orto/static/js/main.dac67373.chunk.js",
-    "main.js.map": "/orto/static/js/main.dac67373.chunk.js.map",
+    "main.js": "/orto/static/js/main.b0b51e11.chunk.js",
+    "main.js.map": "/orto/static/js/main.b0b51e11.chunk.js.map",
     "runtime-main.js": "/orto/static/js/runtime-main.b256cafc.js",
     "runtime-main.js.map": "/orto/static/js/runtime-main.b256cafc.js.map",
     "static/css/2.983f79de.chunk.css": "/orto/static/css/2.983f79de.chunk.css",
-    "static/js/2.2ba06d94.chunk.js": "/orto/static/js/2.2ba06d94.chunk.js",
-    "static/js/2.2ba06d94.chunk.js.map": "/orto/static/js/2.2ba06d94.chunk.js.map",
+    "static/js/2.764e1e79.chunk.js": "/orto/static/js/2.764e1e79.chunk.js",
+    "static/js/2.764e1e79.chunk.js.map": "/orto/static/js/2.764e1e79.chunk.js.map",
     "index.html": "/orto/index.html",
     "static/css/2.983f79de.chunk.css.map": "/orto/static/css/2.983f79de.chunk.css.map",
     "static/css/main.6dea0f05.chunk.css.map": "/orto/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.2ba06d94.chunk.js.LICENSE.txt": "/orto/static/js/2.2ba06d94.chunk.js.LICENSE.txt"
+    "static/js/2.764e1e79.chunk.js.LICENSE.txt": "/orto/static/js/2.764e1e79.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b256cafc.js",
     "static/css/2.983f79de.chunk.css",
-    "static/js/2.2ba06d94.chunk.js",
+    "static/js/2.764e1e79.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.dac67373.chunk.js"
+    "static/js/main.b0b51e11.chunk.js"
   ]
 }
