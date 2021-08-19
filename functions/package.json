@@ -2,6 +2,7 @@
   "name": "functions",
   "scripts": {
     "build": "tsc",
+    "test": "jest",
     "serve": "npm run build && firebase emulators:start --only functions",
     "shell": "npm run build && firebase functions:shell",
     "start": "npm run shell",
@@ -17,8 +18,11 @@
     "firebase-functions": "^3.6.1"
   },
   "devDependencies": {
+    "@types/jest": "^27.0.1",
     "@types/node": "^16.6.2",
     "firebase-functions-test": "^0.2.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.5",
     "typescript": "^3.8.0"
   },
   "private": true
