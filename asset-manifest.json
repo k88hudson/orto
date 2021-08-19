@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/orto/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/orto/static/js/main.b0b51e11.chunk.js",
-    "main.js.map": "/orto/static/js/main.b0b51e11.chunk.js.map",
+    "main.js": "/orto/static/js/main.a3efce29.chunk.js",
+    "main.js.map": "/orto/static/js/main.a3efce29.chunk.js.map",
     "runtime-main.js": "/orto/static/js/runtime-main.b256cafc.js",
     "runtime-main.js.map": "/orto/static/js/runtime-main.b256cafc.js.map",
     "static/css/2.983f79de.chunk.css": "/orto/static/css/2.983f79de.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.983f79de.chunk.css",
     "static/js/2.764e1e79.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.b0b51e11.chunk.js"
+    "static/js/main.a3efce29.chunk.js"
   ]
 }
