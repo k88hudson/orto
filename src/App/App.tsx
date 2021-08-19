@@ -10,6 +10,7 @@ import { ActiveTrials } from "../ActiveTrials/ActiveTrials";
 import { SignIn, SignOut } from "../AuthButtons/AuthButtons";
 import { MyTokens } from "../MyTokens/MyTokens";
 import { NewToken } from "../NewToken/NewToken";
+import { NewTrial } from "../NewTrial/NewTrial";
 
 function App() {
   const [currentUser] = useCurrentUser();
@@ -77,6 +78,9 @@ function App() {
           </Route>
           <Route path="/new/:featureId">
             <NewToken />
+          </Route>
+          <Route path="/new-trial">
+            <NewTrial />
           </Route>
           <Route path="/">
             <ActiveTrials />
