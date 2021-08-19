@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { addToken, useCurrentUser, useFeature } from "../utils/firestore";
 import { TokenRequest } from "../../types/Orto";
 import { useParams, useHistory } from "react-router-dom";
@@ -10,11 +10,23 @@ const TERMS = [
   "Where possible, I agree to apply feature detection / graceful degradation to handle the case where the experimental feature is unavailable.",
 ];
 
+function validateUrl(candidate: string) {
+  let url: URL;
+  try {
+    url = new URL(candidate);
+  } catch (e) {
+    return false;
+  }
+  if (!["http:", "https:"].includes(url.protocol)) return false;
+  return true;
+}
+
 export function NewToken() {
   const [currentUser] = useCurrentUser();
   const uid = currentUser?.uid;
   const history = useHistory();
   const { featureId } = useParams<{ featureId: string }>();
+  const originRef = useRef<HTMLInputElement>(null);
   const [newToken, setNewToken] = useState<
     Omit<TokenRequest, "uid" | "featureId">
   >({
@@ -25,10 +37,12 @@ export function NewToken() {
   const feature = useFeature(featureId);
   const onFormSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
+
     const { origin, isSubdomain } = newToken;
     if (!uid || !origin || !featureId) {
       return;
     }
+
     const ref = await addToken({
       uid: uid,
       origin,
@@ -77,10 +91,18 @@ export function NewToken() {
             required
             className="form-control"
             placeholder="https://foo.com"
+            ref={originRef}
             value={newToken.origin}
-            onChange={(e) =>
-              setNewToken({ ...newToken, origin: e.target.value })
-            }
+            onChange={(e) => {
+              setNewToken({ ...newToken, origin: e.target.value });
+              if (e.target.value && validateUrl(e.target.value)) {
+                originRef.current?.setCustomValidity("");
+              } else {
+                originRef.current?.setCustomValidity(
+                  "Origin must be a valid url starting with http or https"
+                );
+              }
+            }}
           />
         </div>
         <div className="mb-3">
